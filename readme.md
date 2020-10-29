@@ -4,7 +4,7 @@
 
 Generar un fake de la web  **[last.fm](https://www.last.fm/home)**, web de playlists de canciones. El resultado se deberá parecer al que se muestra a continuación:
 
-![Lastfm](https://i.imgur.com/W6lRsdO.gifv)
+![Lastfm](https://i.imgur.com/W6lRsdO.gif)
 
 
 ## Instrucciones
