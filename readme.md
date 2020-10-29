@@ -9,6 +9,19 @@ Generar un fake de la web  **[last.fm](https://www.last.fm/home)**, web de playl
 
 ## Instrucciones
 
+### Pasos que tienes que seguir para entregar el ejercicio:
+
+1. Realiza un fork del repositorio.
+2. Clona __tu__ repositorio a tu máquina local.
+3. Modifica el fichero `script.js` que se facilita en este mismo directorio.
+4. Guarda los ficheros modificados:
+    - `git add .`
+    - `git commit -m 'examen'`
+5. Sube los cambios al repositorio:
+    - `git push`
+6. Genera una __gh-page__ y envía la url vía slack.
+
+### DATOS
 
 Las canciones se encuentran dentro del fichero `music.json` (**-Este fichero no es necesario tocarlo-**). Fichero con las 50 canciones más escuchadas la semana pasada. 
 
