@@ -1,0 +1,136 @@
+
+*{
+    margin:0;
+    font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+
+}
+
+/* layout */
+
+.far {
+    display:block; 
+}
+
+header {
+  /* padding-top: px; */
+  background-color: #222;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+
+    color:#222;
+    font-size: 48px;
+    text-align: center;
+}
+  
+.menu {
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.estilo {
+  width: 120px;
+  height:120px;
+  margin: 1em;
+  text-align: center;
+  line-height: 120px;
+  background: rgba(110, 69, 51, 1);
+  background-size: cover;
+  /* filter: grayscale(90%); */
+}
+
+ a{
+    color:#222;
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration:none;  
+}
+
+.estilo a{
+    color:white;
+}
+.estilo a:hover{
+  text-decoration:underline;
+}
+
+body{
+background-color: #fff;
+    
+}
+
+.menu.principal a:focus{
+    color: #B90000;
+    outline: none;
+}
+
+.estilo1{
+    background-image: url("https://lastfm-img2.akamaized.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg");
+    filter: sepia(90%);
+      
+}
+
+
+.estilo2{background-image: url('https://lastfm-img2.akamaized.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg');
+     filter: contrast(200%);
+}
+.estilo3{background-image: url('https://lastfm-img2.akamaized.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg');
+    filter: grayscale(50%);
+  
+}
+.estilo4{background-image: url('https://lastfm-img2.akamaized.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg');
+    filter: hue-rotate(90deg);
+    }
+.estilo5{background-image: url('https://lastfm-img2.akamaized.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg');
+        filter: saturate(10%);
+    }
+
+.menu-item-selected{
+    margin:1em;
+}
+
+.menu.principal{
+    list-style: none;
+
+}
+.menu-principal-item{
+    margin:1em;
+}
+
+li>a.group-name{
+    font-weight: lighter;
+    margin-right:2em;
+}
+
+ .lista>li{
+    padding: 10px;
+    counter-increment: step-counter;
+    
+ 
+} 
+.lista>li:before{
+    content: " "counter(step-counter)". ";
+    font-size: 20px;
+
+}
+
+.lista>li:nth-child(odd) {background-color: #f2f2f2;}
+
+
+li>div.listeners{
+    font-size: .75em;
+    float:right;
+      
+}
+li>div.listeners::after{
+
+    content:" listeners";
+}
+
+
+
