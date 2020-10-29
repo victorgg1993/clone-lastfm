@@ -4,7 +4,7 @@
 
 Generar un fake de la web  **[last.fm](https://www.last.fm/home)**, web de playlists de canciones. El resultado se deberá parecer al que se muestra a continuación:
 
-![Lastfm](https://imgur.com/7qw3dW1.png)
+![Lastfm](https://i.imgur.com/W6lRsdO.gifv)
 
 
 ## Instrucciones
@@ -33,6 +33,21 @@ El formato del fichero es el siguiente:
         "genre": "reggae"
     },
   ```
+
+### HTML  
+
+Clona la misma estructura que aparece en la animación: header, cuadros, menú, listado (éste último se cargará dinámicamente según la opción seleccionada)
+
+### Estilos
+Presta mucha atención a los estilos que se están aplicando:
+
+- Cada estilo de música tiene un fondo de color, imagen y filtro (se facilitan en la hoja de estilos);
+- El logo del título se facilita en la hoja de estilos.
+- La lista no aparece hasta que se carga la página. Mira la alternancia del fondo en cada una de las canciones
+- Las canciones aparecen numeradas según su posición (usa la propiedad `step-counter` para pintar el número).
+
+
+### JavaScript
 
 Las iteraciones a realizar son:
 
@@ -102,4 +117,4 @@ Las tareas a realizar son:
 
 Asociar un callback a uno de los elementos de la barra superior de géneros musicales.
 
-Programar el callback `loadGenre()` para pasarle el género y filtrar las canciones que tengan ese género asociado.
+Programar el callback `loadGenre()` pasarle el género y filtrar las canciones que tengan ese género asociado.
