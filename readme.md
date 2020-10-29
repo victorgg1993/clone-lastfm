@@ -12,6 +12,8 @@ Generar un fake de la web  **[last.fm](https://www.last.fm/home)**, web de playl
 
 Las canciones se encuentran dentro del fichero `music.json` (**-Este fichero no es necesario tocarlo-**). Fichero con las 50 canciones más escuchadas la semana pasada. 
 
+El fichero tendrás que cargarlo vía `fetch()`.
+
 El formato del fichero es el siguiente:
 
 ```json
