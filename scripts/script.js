@@ -108,12 +108,21 @@ function colorear_opcion(opcion) {
     elemento_li[opcion].id = "opcion_seleccionada";
 }
 
+function pintar_titulo_musica(evento) {
+    let objeto_titulo = document.querySelector('h2').innerHTML;
+    let contenido = evento.srcElement.innerHTML
+
+    if (objeto_titulo != undefined && contenido != undefined) {
+        objeto_titulo = contenido;
+    }
+}
+
 function listener_opciones(evento) {
 
     // canviem el nom del títol 2 pel nom escollit
-    document.querySelector('h2').innerHTML = evento.explicitOriginalTarget.textContent;
+    pintar_titulo_musica(evento);
 
-    switch (evento.explicitOriginalTarget.textContent) {
+    switch (evento.srcElement.textContent) {
         case "Overview":
             loadOverview(Song.canciones);
             colorear_opcion(0);
@@ -133,11 +142,11 @@ function listener_opciones(evento) {
 
 function listener_estilos_musicales(evento) {
 
-    document.querySelector('h2').innerHTML = evento.explicitOriginalTarget.textContent;
-    
-    let id_boto = evento.explicitOriginalTarget.id.replace(/^\D+/g, ''); // pillem el nº de la ID
-    console.log("algo: ", id_boto );
-    let estil_musical = evento.explicitOriginalTarget.textContent.toLowerCase();
+    // canviem el nom del títol 2 pel nom escollit
+    pintar_titulo_musica(evento);
+
+    let id_boto = evento.srcElement.id.replace(/^\D+/g, ''); // pillem el nº de la ID
+    let estil_musical = evento.srcElement.textContent.toLowerCase();
 
     load_estil_musical(Song.canciones, estil_musical);
 }
