@@ -47,29 +47,12 @@ function loadSongs(lista_canciones) { // Done
     }
 }
 
-function loadRock(lista_canciones) {
-    console.log("rock");
-    loadSongs(lista_canciones);
-}
+function load_estil_musical(lista_canciones, estil) { // Done
 
-function loadHipHop(lista_canciones) {
-    console.log("hip hop");
-    loadSongs(lista_canciones);
-}
+    let retorno = [];
+    lista_canciones.map((elemento) => (elemento.genre == estil ? retorno.push(elemento) : 0));
 
-function loadIndie(lista_canciones) {
-    console.log("indie");
-    loadSongs(lista_canciones);
-}
-
-function loadJazz(lista_canciones) {
-    console.log("indie");
-    loadSongs(lista_canciones);
-}
-
-function loadReggae(lista_canciones) {
-    console.log("reggae");
-    loadSongs(lista_canciones);
+    loadSongs(retorno.sort((a, b) => b.listeners - a.listeners));
 }
 
 function loadOverview(lista_canciones) { // Done
@@ -152,28 +135,12 @@ function listener_opciones(evento) {  // Done
     }
 }
 
-function listener_estilos_musicales(evento) { // working
+function listener_estilos_musicales(evento) { // Done
 
-    let t = evento.explicitOriginalTarget.id;
-    let id_boto = t.replace(/^\D+/g, '');
+    let id_boto = evento.explicitOriginalTarget.id.replace(/^\D+/g, ''); // pillem el nº de la ID
+    let funcions = ["rock", "hip-hop", "indie", "jazz", "reggae"];
 
-    switch (id_boto) {
-        case 0:
-            break;
-
-        case 1:
-            break;
-
-        case 2:
-            break;
-
-        case 3:
-            break;
-
-        case 4:
-            break;
-    }
-
+    load_estil_musical(Song.canciones, funcions[id_boto]);
 }
 
 function crear_listeners(id, funcio_listener) { // Done
