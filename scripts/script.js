@@ -61,7 +61,7 @@ function loadTenListened(lista_canciones) { // working
     loadSongs(arr_cancons);
 }
 
-function loadBiggest(lista_canciones) {
+function loadBiggest(lista_canciones) { // Done
 
     let arr_noms = lista_canciones.map((element) => element.artist.name);
     let bandes = [...new Set(arr_noms)]; // borrem repetides
@@ -81,53 +81,6 @@ function loadBiggest(lista_canciones) {
 
     loadSongs(temporal);
 }
-
-/*
-function loadBiggest(lista_canciones) {
-    // la banda amb el major número de reproduccions
-    // mostrar totes les seves músiques
-
-    let arr_noms = lista_canciones.map((element) => element.artist.name);
-    let bandes = [...new Set(arr_noms)]; // borrem repetides
-    let temporal = [];
-
-    bandes.map((element) => temporal.push({ banda: element, reproduccions: 0 })); // posem els elements dins
-
-    for (let j = 0; j < bandes.length; j++) { // nº de bandes
-
-        //temporal.push({ banda: bandes[j], reproduccions: 0 });
-
-            //    for (let i = 0; i < lista_canciones.length; i++) { // nº de musiques
-        
-            //         if (lista_canciones[i].artist.name == bandes[j]) {
-            //             temporal[j].reproduccions += parseInt(lista_canciones[i].listeners);
-            //         }
-            //     }
-         
-        
-                // lista_canciones.map((element) => (element.artist.name == bandes[j] ?
-                //    temporal[j].reproduccions += parseInt(element.listeners) :
-                //    0)); 
-                }
-
-
-                bandes.map((banda, i) =>
-                    lista_canciones.map((element) => (element.artist.name == banda ?
-                        temporal[i].reproduccions += parseInt(element.listeners) :
-                        0))
-            
-                );
-            
-            
-                temporal = temporal.sort((a, b) => b.reproduccions - a.reproduccions)[0];
-                console.log("coses: ", temporal); // la banda amb més reproduccions
-            
-                // 4. agafar el nom de la banda amb més reproduccions
-                // 5. pintar totes les músiques amb el nom de la banda
-            
-                loadSongs(lista_canciones);
-            }          
-*/
 
 function init() { // Done
 
