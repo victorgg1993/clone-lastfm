@@ -101,7 +101,8 @@ body ul:first-of-type {
   flex-flow: row;
   justify-content: space-around;
   list-style-type: none;
-  padding: 1em 20em;
+  padding: 0em 20em;
+  margin: 1em 0em;
 }
 body ul:first-of-type li {
   display: flex;
@@ -117,11 +118,11 @@ body ul:first-of-type li p {
   color: #fff;
   text-align: center;
   font-weight: 600;
-  text-shadow: 2px 2px #c5000e;
 }
 body ul:first-of-type li img {
   display: flex;
-  width: 6em;
+  width: 7em;
+  height: 100%;
 }
 body ul:first-of-type li:nth-last-of-type(5) img {
   filter: sepia(90%);
