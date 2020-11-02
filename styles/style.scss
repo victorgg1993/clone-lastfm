@@ -87,32 +87,64 @@ body {
             }
         }
 
+        button {
+            display: flex;
+            width: 7em;
+            height: 100%;
+
+            align-items: center;
+            justify-content: center;
+
+            color: $color-background;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            text-shadow: 2px 2px black;
+
+            border-style: none;
+        }
+
         li:nth-last-of-type(5) {
-            img {
+            button {
+                background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg")
+                    no-repeat;
+                background-size: 100% 100%;
                 filter: $rock;
             }
         }
 
         li:nth-last-of-type(4) {
-            img {
+            button {
+                background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg")
+                    no-repeat;
+                background-size: 100% 100%;
                 filter: $hip-hop;
             }
         }
 
         li:nth-last-of-type(3) {
-            img {
+            button {
+                background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg")
+                    no-repeat;
+                background-size: 100% 100%;
                 filter: $indie;
             }
         }
 
         li:nth-last-of-type(2) {
-            img {
+            button {
+                background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg")
+                    no-repeat;
+                background-size: 100% 100%;
                 filter: $jazz;
             }
         }
 
         li:nth-last-of-type(1) {
-            img {
+            button {
+                background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg")
+                    no-repeat;
+                background-size: 100% 100%;
                 filter: $reggae;
             }
         }

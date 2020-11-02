@@ -124,19 +124,42 @@ body ul:first-of-type li img {
   width: 7em;
   height: 100%;
 }
-body ul:first-of-type li:nth-last-of-type(5) img {
+body ul:first-of-type button {
+  display: flex;
+  width: 7em;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  text-shadow: 2px 2px black;
+  border-style: none;
+}
+body ul:first-of-type li:nth-last-of-type(5) button {
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg") no-repeat;
+  background-size: 100% 100%;
   filter: sepia(90%);
 }
-body ul:first-of-type li:nth-last-of-type(4) img {
+body ul:first-of-type li:nth-last-of-type(4) button {
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg") no-repeat;
+  background-size: 100% 100%;
   filter: contrast(200%);
 }
-body ul:first-of-type li:nth-last-of-type(3) img {
+body ul:first-of-type li:nth-last-of-type(3) button {
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg") no-repeat;
+  background-size: 100% 100%;
   filter: grayscale(50%);
 }
-body ul:first-of-type li:nth-last-of-type(2) img {
+body ul:first-of-type li:nth-last-of-type(2) button {
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg") no-repeat;
+  background-size: 100% 100%;
   filter: hue-rotate(90deg);
 }
-body ul:first-of-type li:nth-last-of-type(1) img {
+body ul:first-of-type li:nth-last-of-type(1) button {
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg") no-repeat;
+  background-size: 100% 100%;
   filter: saturate(10%);
 }
 body ul:first-of-type li:hover {

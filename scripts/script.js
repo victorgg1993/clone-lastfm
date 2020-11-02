@@ -7,7 +7,7 @@ class Song {
     constructor() {
     }
 
-    setItemLi(padre, element_canco) { // Done
+    setItemLi(padre, element_canco) {
 
         let li_musica = document.createElement('li');
         li_musica.innerHTML =
@@ -26,17 +26,13 @@ class Song {
         padre.appendChild(li_musica);
     }
 
-    setItemGroupName(group, url) {
-    }
-    setItemSongTitle(title) {
-    }
-    setListeners(listeners) {
-    }
-    getNewElement(group, url, title, listeners) {
-    }
+    setItemGroupName(group, url) { }
+    setItemSongTitle(title) { }
+    setListeners(listeners) { }
+    getNewElement(group, url, title, listeners) { }
 }
 
-function loadSongs(lista_canciones) { // Done
+function loadSongs(lista_canciones) {
 
     let musica = new Song();
     let ul_musicas = document.getElementsByTagName('ul')[2];
@@ -47,7 +43,7 @@ function loadSongs(lista_canciones) { // Done
     }
 }
 
-function load_estil_musical(lista_canciones, estil) { // Done
+function load_estil_musical(lista_canciones, estil) {
 
     let retorno = [];
     lista_canciones.map((elemento) => (elemento.genre == estil ? retorno.push(elemento) : 0));
@@ -55,16 +51,16 @@ function load_estil_musical(lista_canciones, estil) { // Done
     loadSongs(retorno.sort((a, b) => b.listeners - a.listeners));
 }
 
-function loadOverview(lista_canciones) { // Done
+function loadOverview(lista_canciones) {
     loadSongs(lista_canciones);
 }
 
-function loadTenListened(lista_canciones) { // Done
+function loadTenListened(lista_canciones) {
     let arr_cancons = lista_canciones.slice(0, 10);
     loadSongs(arr_cancons.sort((a, b) => b.listeners - a.listeners));
 }
 
-function loadBiggest(lista_canciones) { // Done
+function loadBiggest(lista_canciones) {
 
     let arr_noms = lista_canciones.map((element) => element.artist.name);
     let bandes = [...new Set(arr_noms)]; // borrem repetides
@@ -85,7 +81,7 @@ function loadBiggest(lista_canciones) { // Done
     loadSongs(temporal);
 }
 
-function init() { // Done
+function init() {
 
     fetch(`./db/music.json`)
         .then(respuesta =>
@@ -98,7 +94,7 @@ function init() { // Done
         );
 }
 
-function colorear_opcion(opcion) {  // Done
+function colorear_opcion(opcion) {
 
     const OVERVIEW = 0;
     const TOP10 = 1;
@@ -112,7 +108,7 @@ function colorear_opcion(opcion) {  // Done
     elemento_li[opcion].id = "opcion_seleccionada";
 }
 
-function listener_opciones(evento) {  // Done
+function listener_opciones(evento) {
 
     // canviem el nom del títol 2 pel nom escollit
     document.querySelector('h2').innerHTML = evento.explicitOriginalTarget.textContent;
@@ -135,15 +131,18 @@ function listener_opciones(evento) {  // Done
     }
 }
 
-function listener_estilos_musicales(evento) { // Done
+function listener_estilos_musicales(evento) {
 
+    document.querySelector('h2').innerHTML = evento.explicitOriginalTarget.textContent;
+    
     let id_boto = evento.explicitOriginalTarget.id.replace(/^\D+/g, ''); // pillem el nº de la ID
-    let funcions = ["rock", "hip-hop", "indie", "jazz", "reggae"];
+    console.log("algo: ", id_boto );
+    let estil_musical = evento.explicitOriginalTarget.textContent.toLowerCase();
 
-    load_estil_musical(Song.canciones, funcions[id_boto]);
+    load_estil_musical(Song.canciones, estil_musical);
 }
 
-function crear_listeners(id, funcio_listener) { // Done
+function crear_listeners(id, funcio_listener) {
 
     let tamany = document.getElementsByTagName('ul')[id].children.length;
 
@@ -153,7 +152,7 @@ function crear_listeners(id, funcio_listener) { // Done
     }
 }
 
-function main(texto_json) { // done 3/5
+function main(texto_json) {
 
     const IMG_ESTILOS_MUSICALES = 0;
     const OPCIONES_ESTILOS = 1;
