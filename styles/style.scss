@@ -104,6 +104,11 @@ body {
             border-style: none;
         }
 
+        button:hover{
+            
+            cursor: pointer;
+        }
+
         li:nth-last-of-type(5) {
             button {
                 background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg")

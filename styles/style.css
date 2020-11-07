@@ -137,6 +137,9 @@ body ul:first-of-type button {
   text-shadow: 2px 2px black;
   border-style: none;
 }
+body ul:first-of-type button:hover {
+  cursor: pointer;
+}
 body ul:first-of-type li:nth-last-of-type(5) button {
   background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg") no-repeat;
   background-size: 100% 100%;
